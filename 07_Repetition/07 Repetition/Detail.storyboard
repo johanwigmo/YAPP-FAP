@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I3p-FB-ixq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="017-We-Mh1">
+            <objects>
+                <viewController id="I3p-FB-ixq" customClass="DetailViewController" customModule="_7_Repetition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b0T-Sr-ImN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LNg-MP-xt1">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Qnv-6H-GIM"/>
+                                    <constraint firstAttribute="height" constant="200" id="a2W-76-X7J"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LNg-MP-xt1" firstAttribute="centerX" secondItem="b0T-Sr-ImN" secondAttribute="centerX" constant="-0.5" id="tzJ-cU-foA"/>
+                            <constraint firstItem="LNg-MP-xt1" firstAttribute="centerY" secondItem="b0T-Sr-ImN" secondAttribute="centerY" constant="-0.5" id="vL6-dZ-qRb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FT3-Fy-4Gb"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="LNg-MP-xt1" id="vAU-a1-wmy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lz7-M3-b0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104.8" y="80.50974512743629"/>
+        </scene>
+    </scenes>
+</document>
