@@ -10,7 +10,6 @@ import UIKit
 
 enum StyledButtonStyle: Int {
     case done
-    case cancel
     case disabled
 }
 
@@ -82,10 +81,6 @@ class StyledButton: UIView {
             backgroundColor = .green
             button.setTitleColor(.white, for: .normal)
             button.setTitle("Done", for: .normal)
-        case .cancel:
-            backgroundColor = .red
-            button.setTitleColor(.black, for: .normal)
-            button.setTitle("Cancel", for: .normal)
         case .disabled:
             button.isEnabled = false
             backgroundColor = backgroundColor?.withAlphaComponent(0.5)

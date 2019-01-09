@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7747B7321E632F300B12C7D /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7747B7221E632F300B12C7D /* RatingView.swift */; };
 		D775962421E5E8CF007B074F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D775962321E5E8CF007B074F /* AppDelegate.swift */; };
 		D775962621E5E8CF007B074F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D775962521E5E8CF007B074F /* ViewController.swift */; };
 		D775962921E5E8CF007B074F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D775962721E5E8CF007B074F /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D7747B7221E632F300B12C7D /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		D775962021E5E8CF007B074F /* 09 Custom Views.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "09 Custom Views.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D775962321E5E8CF007B074F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D775962521E5E8CF007B074F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				D7BA0D3321E5FA31004C9177 /* StyledButton.swift */,
 				D7BA0D3F21E620BC004C9177 /* TwoSquareView.swift */,
 				D7BA0D4321E6250C004C9177 /* ThreeSquareView.swift */,
+				D7747B7221E632F300B12C7D /* RatingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				D7BA0D4221E623AA004C9177 /* ProgrammaticallyViewController.swift in Sources */,
 				D7BA0D3021E5F4FC004C9177 /* TitleTextField.swift in Sources */,
 				D775963921E5E95F007B074F /* CircleView.swift in Sources */,
+				D7747B7321E632F300B12C7D /* RatingView.swift in Sources */,
 				D7BA0D2C21E5F2AD004C9177 /* HorizontalLabelView.swift in Sources */,
 				D775962621E5E8CF007B074F /* ViewController.swift in Sources */,
 				D7BA0D3E21E61761004C9177 /* LoginViewController.swift in Sources */,

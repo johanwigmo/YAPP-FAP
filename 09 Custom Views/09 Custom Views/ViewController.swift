@@ -16,7 +16,7 @@ class ViewController: UIViewController, StyledButtonDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        button.style = .cancel
+        button.style = .done
         button.delegate = self
     }
     

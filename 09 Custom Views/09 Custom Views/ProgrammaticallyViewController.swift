@@ -21,6 +21,16 @@ class ProgrammaticallyViewController: UIViewController {
         twoSquareView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         twoSquareView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
         twoSquareView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+        let ratingView = RatingView(rating: 2.9)
+        ratingView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(ratingView)
+        
+        ratingView.widthAnchor.constraint(equalToConstant: 250).isActive = true
+        ratingView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        ratingView.topAnchor.constraint(equalTo: twoSquareView.bottomAnchor, constant: 20).isActive = true
+        ratingView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
     }
 
 }
