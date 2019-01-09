@@ -23,6 +23,9 @@
 		D7BA0D3221E5FA24004C9177 /* StyledButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7BA0D3121E5FA24004C9177 /* StyledButton.xib */; };
 		D7BA0D3421E5FA31004C9177 /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA0D3321E5FA31004C9177 /* StyledButton.swift */; };
 		D7BA0D3E21E61761004C9177 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA0D3D21E61761004C9177 /* LoginViewController.swift */; };
+		D7BA0D4021E620BC004C9177 /* TwoSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA0D3F21E620BC004C9177 /* TwoSquareView.swift */; };
+		D7BA0D4221E623AA004C9177 /* ProgrammaticallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA0D4121E623AA004C9177 /* ProgrammaticallyViewController.swift */; };
+		D7BA0D4421E6250C004C9177 /* ThreeSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA0D4321E6250C004C9177 /* ThreeSquareView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		D7BA0D3121E5FA24004C9177 /* StyledButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StyledButton.xib; sourceTree = "<group>"; };
 		D7BA0D3321E5FA31004C9177 /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
 		D7BA0D3D21E61761004C9177 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D7BA0D3F21E620BC004C9177 /* TwoSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSquareView.swift; sourceTree = "<group>"; };
+		D7BA0D4121E623AA004C9177 /* ProgrammaticallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticallyViewController.swift; sourceTree = "<group>"; };
+		D7BA0D4321E6250C004C9177 /* ThreeSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeSquareView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 				D775962321E5E8CF007B074F /* AppDelegate.swift */,
 				D775962521E5E8CF007B074F /* ViewController.swift */,
 				D7BA0D3D21E61761004C9177 /* LoginViewController.swift */,
+				D7BA0D4121E623AA004C9177 /* ProgrammaticallyViewController.swift */,
 				D775962721E5E8CF007B074F /* Main.storyboard */,
 				D775962A21E5E8CF007B074F /* Assets.xcassets */,
 				D775962C21E5E8CF007B074F /* LaunchScreen.storyboard */,
@@ -101,6 +108,8 @@
 				D7BA0D2F21E5F4FC004C9177 /* TitleTextField.swift */,
 				D7BA0D3121E5FA24004C9177 /* StyledButton.xib */,
 				D7BA0D3321E5FA31004C9177 /* StyledButton.swift */,
+				D7BA0D3F21E620BC004C9177 /* TwoSquareView.swift */,
+				D7BA0D4321E6250C004C9177 /* ThreeSquareView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,12 +190,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7BA0D4221E623AA004C9177 /* ProgrammaticallyViewController.swift in Sources */,
 				D7BA0D3021E5F4FC004C9177 /* TitleTextField.swift in Sources */,
 				D775963921E5E95F007B074F /* CircleView.swift in Sources */,
 				D7BA0D2C21E5F2AD004C9177 /* HorizontalLabelView.swift in Sources */,
 				D775962621E5E8CF007B074F /* ViewController.swift in Sources */,
 				D7BA0D3E21E61761004C9177 /* LoginViewController.swift in Sources */,
 				D775962421E5E8CF007B074F /* AppDelegate.swift in Sources */,
+				D7BA0D4421E6250C004C9177 /* ThreeSquareView.swift in Sources */,
+				D7BA0D4021E620BC004C9177 /* TwoSquareView.swift in Sources */,
 				D7BA0D3421E5FA31004C9177 /* StyledButton.swift in Sources */,
 				D775963D21E5EE0B007B074F /* VerticalLabelView.swift in Sources */,
 			);
