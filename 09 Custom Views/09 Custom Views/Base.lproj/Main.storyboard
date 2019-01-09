@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8WN-cC-PC8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -153,5 +153,101 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="PAe-xh-oSN">
+            <objects>
+                <viewController id="8WN-cC-PC8" customClass="LoginViewController" customModule="_9_Custom_Views" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IYq-SL-R99">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="6s9-VJ-MBX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYU-cd-EKi" customClass="TitleTextField" customModule="_9_Custom_Views" customModuleProvider="target">
+                                <rect key="frame" x="20" y="296" width="335" height="75"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="bmQ-Ta-asL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textFieldColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Användarnamn"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxr-SI-Y4B" customClass="TitleTextField" customModule="_9_Custom_Views" customModuleProvider="target">
+                                <rect key="frame" x="20" y="391" width="335" height="75"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="4U0-9H-pVn"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="I26-Wg-tk5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textFieldColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Lösenord"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSecuredText" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHk-Oj-WHY" customClass="StyledButton" customModule="_9_Custom_Views" customModuleProvider="target">
+                                <rect key="frame" x="20" y="597" width="335" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vOs-s6-JIM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8R7-wv-kWo" firstAttribute="trailing" secondItem="IHk-Oj-WHY" secondAttribute="trailing" constant="20" id="3yS-HU-uHx"/>
+                            <constraint firstItem="8R7-wv-kWo" firstAttribute="bottom" secondItem="IHk-Oj-WHY" secondAttribute="bottom" constant="20" id="CFO-vN-PJK"/>
+                            <constraint firstItem="6s9-VJ-MBX" firstAttribute="bottom" secondItem="IYq-SL-R99" secondAttribute="bottom" id="LUN-Ov-VZW"/>
+                            <constraint firstItem="dxr-SI-Y4B" firstAttribute="top" secondItem="yYU-cd-EKi" secondAttribute="bottom" constant="20" id="OwJ-in-rWW"/>
+                            <constraint firstItem="IHk-Oj-WHY" firstAttribute="leading" secondItem="8R7-wv-kWo" secondAttribute="leading" constant="20" id="XQa-FI-wWe"/>
+                            <constraint firstItem="yYU-cd-EKi" firstAttribute="centerY" secondItem="IYq-SL-R99" secondAttribute="centerY" id="XnV-Y7-NpO"/>
+                            <constraint firstItem="6s9-VJ-MBX" firstAttribute="top" secondItem="IYq-SL-R99" secondAttribute="top" id="a0b-6l-DQO"/>
+                            <constraint firstItem="8R7-wv-kWo" firstAttribute="trailing" secondItem="yYU-cd-EKi" secondAttribute="trailing" constant="20" id="bVx-0v-yz1"/>
+                            <constraint firstItem="8R7-wv-kWo" firstAttribute="trailing" secondItem="dxr-SI-Y4B" secondAttribute="trailing" constant="20" id="cFr-Xm-4Iu"/>
+                            <constraint firstItem="dxr-SI-Y4B" firstAttribute="leading" secondItem="8R7-wv-kWo" secondAttribute="leading" constant="20" id="cGr-EN-16g"/>
+                            <constraint firstItem="yYU-cd-EKi" firstAttribute="leading" secondItem="8R7-wv-kWo" secondAttribute="leading" constant="20" id="dhe-iH-QqI"/>
+                            <constraint firstItem="6s9-VJ-MBX" firstAttribute="leading" secondItem="8R7-wv-kWo" secondAttribute="leading" id="fAX-z1-D9f"/>
+                            <constraint firstItem="6s9-VJ-MBX" firstAttribute="trailing" secondItem="8R7-wv-kWo" secondAttribute="trailing" id="vvD-Gh-Ubl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8R7-wv-kWo"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="IHk-Oj-WHY" id="gMB-6r-fHh"/>
+                        <outlet property="passwordTextField" destination="dxr-SI-Y4B" id="a4k-6v-fpb"/>
+                        <outlet property="usernameTextField" destination="yYU-cd-EKi" id="n4J-Kn-P95"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PpI-GH-LdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="-631.0344827586207"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="background" width="1125" height="2436"/>
+    </resources>
 </document>

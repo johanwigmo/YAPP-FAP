@@ -22,6 +22,7 @@
 		D7BA0D3021E5F4FC004C9177 /* TitleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA0D2F21E5F4FC004C9177 /* TitleTextField.swift */; };
 		D7BA0D3221E5FA24004C9177 /* StyledButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7BA0D3121E5FA24004C9177 /* StyledButton.xib */; };
 		D7BA0D3421E5FA31004C9177 /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA0D3321E5FA31004C9177 /* StyledButton.swift */; };
+		D7BA0D3E21E61761004C9177 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BA0D3D21E61761004C9177 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		D7BA0D2F21E5F4FC004C9177 /* TitleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextField.swift; sourceTree = "<group>"; };
 		D7BA0D3121E5FA24004C9177 /* StyledButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StyledButton.xib; sourceTree = "<group>"; };
 		D7BA0D3321E5FA31004C9177 /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
+		D7BA0D3D21E61761004C9177 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				D775963521E5E8EC007B074F /* Views */,
 				D775962321E5E8CF007B074F /* AppDelegate.swift */,
 				D775962521E5E8CF007B074F /* ViewController.swift */,
+				D7BA0D3D21E61761004C9177 /* LoginViewController.swift */,
 				D775962721E5E8CF007B074F /* Main.storyboard */,
 				D775962A21E5E8CF007B074F /* Assets.xcassets */,
 				D775962C21E5E8CF007B074F /* LaunchScreen.storyboard */,
@@ -182,6 +185,7 @@
 				D775963921E5E95F007B074F /* CircleView.swift in Sources */,
 				D7BA0D2C21E5F2AD004C9177 /* HorizontalLabelView.swift in Sources */,
 				D775962621E5E8CF007B074F /* ViewController.swift in Sources */,
+				D7BA0D3E21E61761004C9177 /* LoginViewController.swift in Sources */,
 				D775962421E5E8CF007B074F /* AppDelegate.swift in Sources */,
 				D7BA0D3421E5FA31004C9177 /* StyledButton.swift in Sources */,
 				D775963D21E5EE0B007B074F /* VerticalLabelView.swift in Sources */,

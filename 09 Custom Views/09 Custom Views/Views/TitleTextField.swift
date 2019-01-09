@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol TitleTextFieldDelegate: class {
+    func titleTextFieldDidChange(_ textField: UITextField)
+}
+
 @IBDesignable
 class TitleTextField: UIView {
 
@@ -20,6 +24,11 @@ class TitleTextField: UIView {
     @IBInspectable
     var color: UIColor? {
         didSet { textFieldView.backgroundColor = color }
+    }
+    
+    @IBInspectable
+    var titleTextColor: UIColor? {
+        didSet { titleLabel.textColor = titleTextColor }
     }
     
     @IBInspectable
@@ -37,11 +46,22 @@ class TitleTextField: UIView {
         didSet { textField.text = textFieldText }
     }
     
+    @IBInspectable
+    var isSecuredText: Bool = false {
+        didSet { textField.isSecureTextEntry = isSecuredText }
+    }
+    
+    var isEmpty: Bool {
+        return textField.text?.count ?? 0 == 0
+    }
+    
     var text: String? {
         get {
             return textField.text
         }
     }
+    
+    weak var delegate: TitleTextFieldDelegate?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -64,6 +84,10 @@ class TitleTextField: UIView {
         return Bundle(for: TitleTextField.self).loadNibNamed(identifer, owner: self, options: nil)?.first as! UIView
     }
 
+    @IBAction func textFieldDidChanged(_ sender: UITextField) {
+        delegate?.titleTextFieldDidChange(sender)
+    }
+    
 }
 
 extension TitleTextField: UITextFieldDelegate {

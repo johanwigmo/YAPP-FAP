@@ -11,6 +11,7 @@ import UIKit
 enum StyledButtonStyle: Int {
     case done
     case cancel
+    case disabled
 }
 
 protocol StyledButtonDelegate: class {
@@ -40,6 +41,16 @@ class StyledButton: UIView {
         }
     }
     
+    var isEnabled: Bool {
+        get {
+            return style != .disabled
+        }
+        set {
+            style = newValue ? .done : .disabled
+            updateStyle()
+        }
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
@@ -56,6 +67,7 @@ class StyledButton: UIView {
         customView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         customView.backgroundColor = .clear
         addSubview(customView)
+        updateStyle()
     }
     
     private func loadNib() -> UIView {
@@ -63,9 +75,22 @@ class StyledButton: UIView {
     }
 
     private func updateStyle() {
-        backgroundColor = style == .done ? .green : .red
-        button.setTitleColor(style == .done ? .white : .black, for: .normal)
-        button.setTitle(style == .done ? "Done" : "Cancel", for: .normal)
+        button.isEnabled = true
+        
+        switch style {
+        case .done:
+            backgroundColor = .green
+            button.setTitleColor(.white, for: .normal)
+            button.setTitle("Done", for: .normal)
+        case .cancel:
+            backgroundColor = .red
+            button.setTitleColor(.black, for: .normal)
+            button.setTitle("Cancel", for: .normal)
+        case .disabled:
+            button.isEnabled = false
+            backgroundColor = backgroundColor?.withAlphaComponent(0.5)
+        }
+        
     }
     
     @IBAction func buttonAction() {
