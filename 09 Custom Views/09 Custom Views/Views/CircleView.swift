@@ -17,15 +17,14 @@ class CircleView: UIView {
     
     @IBInspectable
     var color: UIColor? {
-        didSet {
-            circle.backgroundColor = color
-        }
+        didSet { circle.backgroundColor = color }
     }
     
     @IBInspectable
     var cornerRadius: CGFloat = 0 {
         didSet {
-//            circle.layer.cornerRadius = cornerRadius
+            circle.layer.cornerRadius = cornerRadius
+            circle.layer.masksToBounds = true
         }
     }
     
