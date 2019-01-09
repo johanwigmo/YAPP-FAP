@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HorizontalLabelView" customModule="_9_Custom_Views" customModuleProvider="target">
+            <connections>
+                <outlet property="leftLabel" destination="GGP-jj-LdW" id="Its-1G-0Bt"/>
+                <outlet property="rightLabel" destination="yKE-Ye-nuJ" id="9le-Xk-i6b"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGP-jj-LdW">
+                    <rect key="frame" x="0.0" y="0.0" width="323" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKE-Ye-nuJ">
+                    <rect key="frame" x="333" y="0.0" width="42" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="5Nh-Mi-4nq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="yKE-Ye-nuJ" secondAttribute="bottom" id="5gM-T1-TXw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yKE-Ye-nuJ" secondAttribute="trailing" id="F0s-zg-tLl"/>
+                <constraint firstItem="GGP-jj-LdW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Naz-A8-VNb"/>
+                <constraint firstItem="yKE-Ye-nuJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="SkG-68-kDE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="GGP-jj-LdW" secondAttribute="bottom" id="W4v-Mi-rdY"/>
+                <constraint firstItem="GGP-jj-LdW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fhp-QB-4xZ"/>
+                <constraint firstItem="yKE-Ye-nuJ" firstAttribute="leading" secondItem="GGP-jj-LdW" secondAttribute="trailing" constant="10" id="jcS-5c-mAF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>
