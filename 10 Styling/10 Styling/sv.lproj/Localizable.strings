@@ -1,0 +1,5 @@
+
+"hello_world" = "Hej Världen!";
+
+"hello_name" = "Hej %@";
+"hello_fullname" = "Hej %@ %@";

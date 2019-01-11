@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D7747B7D21E63C2800B12C7D /* 10 Styling Pre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "10 Styling Pre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7747B7D21E63C2800B12C7D /* 10 Styling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "10 Styling.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7747B8021E63C2800B12C7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7747B8221E63C2800B12C7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D7747B8521E63C2800B12C7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		D7747B7421E63C2800B12C7D = {
 			isa = PBXGroup;
 			children = (
-				D7747B7F21E63C2800B12C7D /* 10 Styling Pre */,
+				D7747B7F21E63C2800B12C7D /* 10 Styling */,
 				D7747B7E21E63C2800B12C7D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,12 +62,12 @@
 		D7747B7E21E63C2800B12C7D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D7747B7D21E63C2800B12C7D /* 10 Styling Pre.app */,
+				D7747B7D21E63C2800B12C7D /* 10 Styling.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D7747B7F21E63C2800B12C7D /* 10 Styling Pre */ = {
+		D7747B7F21E63C2800B12C7D /* 10 Styling */ = {
 			isa = PBXGroup;
 			children = (
 				D7747B8021E63C2800B12C7D /* AppDelegate.swift */,
@@ -83,15 +83,15 @@
 				D7747BAB21E647A100B12C7D /* Text.strings */,
 				D7747BB121E69ACF00B12C7D /* Coiny-Regular.ttf */,
 			);
-			path = "10 Styling Pre";
+			path = "10 Styling";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D7747B7C21E63C2800B12C7D /* 10 Styling Pre */ = {
+		D7747B7C21E63C2800B12C7D /* 10 Styling */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D7747B8F21E63C2900B12C7D /* Build configuration list for PBXNativeTarget "10 Styling Pre" */;
+			buildConfigurationList = D7747B8F21E63C2900B12C7D /* Build configuration list for PBXNativeTarget "10 Styling" */;
 			buildPhases = (
 				D7747B7921E63C2800B12C7D /* Sources */,
 				D7747B7A21E63C2800B12C7D /* Frameworks */,
@@ -101,9 +101,9 @@
 			);
 			dependencies = (
 			);
-			name = "10 Styling Pre";
+			name = "10 Styling";
 			productName = "10 Styling Pre";
-			productReference = D7747B7D21E63C2800B12C7D /* 10 Styling Pre.app */;
+			productReference = D7747B7D21E63C2800B12C7D /* 10 Styling.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -121,7 +121,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D7747B7821E63C2800B12C7D /* Build configuration list for PBXProject "10 Styling Pre" */;
+			buildConfigurationList = D7747B7821E63C2800B12C7D /* Build configuration list for PBXProject "10 Styling" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -135,7 +135,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D7747B7C21E63C2800B12C7D /* 10 Styling Pre */,
+				D7747B7C21E63C2800B12C7D /* 10 Styling */,
 			);
 		};
 /* End PBXProject section */
@@ -342,12 +342,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "10 Styling Pre/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/10 Styling/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "se.newton.-0-Styling-Pre";
+				PRODUCT_BUNDLE_IDENTIFIER = "se.newton.-0-Styling";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -359,12 +359,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "10 Styling Pre/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/10 Styling/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "se.newton.-0-Styling-Pre";
+				PRODUCT_BUNDLE_IDENTIFIER = "se.newton.-0-Styling";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -374,7 +374,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D7747B7821E63C2800B12C7D /* Build configuration list for PBXProject "10 Styling Pre" */ = {
+		D7747B7821E63C2800B12C7D /* Build configuration list for PBXProject "10 Styling" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D7747B8D21E63C2900B12C7D /* Debug */,
@@ -383,7 +383,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D7747B8F21E63C2900B12C7D /* Build configuration list for PBXNativeTarget "10 Styling Pre" */ = {
+		D7747B8F21E63C2900B12C7D /* Build configuration list for PBXNativeTarget "10 Styling" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D7747B9021E63C2900B12C7D /* Debug */,

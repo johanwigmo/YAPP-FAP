@@ -21,6 +21,11 @@ class ViewController: UIViewController {
         topLabel.text = "hello_world".localized
         bottomLabel.text = "table".localized(from: "Text")
         
+        // Localize string with one input
+//        bottomLabel.text = String(format: "hello_name".localized, "Kalle")
+        // Localize string with multiple inputs
+//        bottomLabel.text = String(format: "hello_fullname".localized, arguments: ["Kalle", "Pettersson"])
+        
         rightImageView.image = UIImage(named: "flag_" + Locale.current.supportedLanguageCode)
     }
 
