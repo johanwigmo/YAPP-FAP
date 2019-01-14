@@ -20,6 +20,9 @@
 		D718441121EC8BAA009AE4BF /* MovieFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718441021EC8BAA009AE4BF /* MovieFactory.swift */; };
 		D718441421EC8DB6009AE4BF /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718441221EC8DB6009AE4BF /* MovieTableViewCell.swift */; };
 		D718441521EC8DB6009AE4BF /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D718441321EC8DB6009AE4BF /* MovieTableViewCell.xib */; };
+		D718441821ECADBB009AE4BF /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718441721ECADBB009AE4BF /* CollectionViewController.swift */; };
+		D718441B21ECB521009AE4BF /* CustomCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718441A21ECB521009AE4BF /* CustomCollectionViewController.swift */; };
+		D718441D21ECB590009AE4BF /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D718441C21ECB590009AE4BF /* CustomLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		D718441021EC8BAA009AE4BF /* MovieFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieFactory.swift; sourceTree = "<group>"; };
 		D718441221EC8DB6009AE4BF /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		D718441321EC8DB6009AE4BF /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		D718441721ECADBB009AE4BF /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		D718441A21ECB521009AE4BF /* CustomCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewController.swift; sourceTree = "<group>"; };
+		D718441C21ECB590009AE4BF /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,8 @@
 				D718440521EC851C009AE4BF /* StackView ScrollView */,
 				D718440621EC8523009AE4BF /* Lists */,
 				D718440721EC8A01009AE4BF /* Movies */,
+				D718441621ECAD7F009AE4BF /* CollectionView */,
+				D718441921ECB50D009AE4BF /* Custom CollectionView Layout */,
 				D71843F521EC80D7009AE4BF /* Main.storyboard */,
 				D71843F821EC80D8009AE4BF /* Assets.xcassets */,
 				D71843FA21EC80D8009AE4BF /* LaunchScreen.storyboard */,
@@ -110,6 +118,23 @@
 				D718440E21EC8BA3009AE4BF /* movies.json */,
 			);
 			path = Movies;
+			sourceTree = "<group>";
+		};
+		D718441621ECAD7F009AE4BF /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				D718441721ECADBB009AE4BF /* CollectionViewController.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		D718441921ECB50D009AE4BF /* Custom CollectionView Layout */ = {
+			isa = PBXGroup;
+			children = (
+				D718441A21ECB521009AE4BF /* CustomCollectionViewController.swift */,
+				D718441C21ECB590009AE4BF /* CustomLayout.swift */,
+			);
+			path = "Custom CollectionView Layout";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,12 +210,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D718441821ECADBB009AE4BF /* CollectionViewController.swift in Sources */,
 				D718440B21EC8AC3009AE4BF /* MoviesDataProvider.swift in Sources */,
 				D718441121EC8BAA009AE4BF /* MovieFactory.swift in Sources */,
 				D71843F421EC80D7009AE4BF /* ViewController.swift in Sources */,
+				D718441D21ECB590009AE4BF /* CustomLayout.swift in Sources */,
 				D718440D21EC8B12009AE4BF /* Movie.swift in Sources */,
 				D71843F221EC80D7009AE4BF /* AppDelegate.swift in Sources */,
 				D718440421EC8519009AE4BF /* ListViewController.swift in Sources */,
+				D718441B21ECB521009AE4BF /* CustomCollectionViewController.swift in Sources */,
 				D718441421EC8DB6009AE4BF /* MovieTableViewCell.swift in Sources */,
 				D718440921EC8A2A009AE4BF /* MoviesViewController.swift in Sources */,
 			);
