@@ -1,0 +1,242 @@
+[
+ {
+   "Title": "The Shawshank Redemption",
+   "Year": "(1994)",
+   "Rating": "9.2",
+   "Genre": "drama",
+   "Actors": [
+        "Tim Robbins", 
+        "Morgan Freeman", 
+        "Bob Gunton"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "The Godfather",
+   "Year": "(1972)",
+   "Rating": "9.2",
+   "Genre": "drama",
+   "Actors": [
+        "Marlon Brando", 
+        "Al Pacino", 
+        "James Caan"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "The Godfather: Part II",
+   "Year": "(1974)",
+   "Rating": "9.0",
+   "Genre": "drama",
+   "Actors": [
+        "Al Pacino", 
+        "Robert De Niro", 
+        "Robert Duvall"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "The Dark Knight",
+   "Year": "(2008)",
+   "Rating": "9.0",
+   "Genre": "action",
+   "Actors": [
+        "Christian Bale", 
+        "Heath Ledger", 
+        "Aaron Eckhart"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "12 Angry Men",
+   "Year": "(1957)",
+   "Rating": "8.9",
+   "Genre": "drama",
+   "Actors": [
+       "Henry Fonda", 
+       "Lee J. Cobb", 
+       "Martin Balsam"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "Schindler's List",
+   "Year": "(1993)",
+   "Rating": "8.9",
+   "Genre": "drama",
+   "Actors": [
+        "Liam Neeson", 
+        "Ralph Fiennes", 
+        "Ben Kingsley"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "Pulp Fiction",
+   "Year": "(1994)",
+   "Rating": "8.9",
+   "Genre": "drama",
+   "Actors": [
+        "John Travolta", 
+        "Uma Thurman", 
+        "Samuel L. Jackson"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "The Lord of the Rings: The Return of the King",
+   "Year": "(2003)",
+   "Rating": "8.9",
+   "Genre": "drama",
+   "Actors": [
+       "Elijah Wood", 
+       "Viggo Mortensen", 
+       "Ian McKellen"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "The Good, the Bad and the Ugly",
+   "Year": "(1966)",
+   "Rating": "8.8",
+   "Genre": "western",
+   "Actors": [
+        "Clint Eastwood", 
+        "Eli Wallach", 
+        "Lee Van Cleef"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "Fight Club",
+   "Year": "(1999)",
+   "Rating": "8.8",
+   "Genre": "drama",
+   "Actors": [
+        "Brad Pitt", 
+        "Edward Norton", 
+        "Meat Loaf"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "The Lord of the Rings: The Fellowship of the Ring",
+   "Year": "(2001)",
+   "Rating": "8.8",
+   "Genre": "drama",
+   "Actors": [
+        "Elijah Wood", 
+        "Ian McKellen", 
+        "Orlando Bloom "
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "Forrest Gump",
+   "Year": "(1994)",
+   "Rating": "8.7",
+   "Genre": "drama",
+   "Actors": [
+       "Tom Hanks", 
+       "Robin Wright", 
+       "Gary Sinise"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "Star Wars: Episode V - The Empire Strikes Back",
+   "Year": "(1980)",
+   "Rating": "8.7",
+   "Genre": "action",
+   "Actors": [
+        "Mark Hamill", 
+        "Harrison Ford", 
+        "Carrie Fisher"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "Inception",
+   "Year": "(2010)",
+   "Rating": "8.7",
+   "Genre": "action",
+   "Actors": [
+       "Leonardo DiCaprio", 
+       "Joseph Gordon-Levitt", 
+       "Ellen Page"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "The Lord of the Rings: The Two Towers",
+   "Year": "(2002)",
+   "Rating": "8.7",
+   "Genre": "drama",
+   "Actors": [
+       "Elijah Wood", 
+       "Ian McKellen", 
+       "Viggo Mortensen"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "One Flew Over the Cuckoo's Nest",
+   "Year": "(1975)",
+   "Rating": "8.7",
+   "Genre": "drama",
+   "Actors": [
+       "Jack Nicholson", 
+       "Louise Fletcher", 
+       "Will Sampson"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "Goodfellas",
+   "Year": "(1990)",
+   "Rating": "8.7",
+   "Genre": "drama",
+   "Actors": [
+        "Robert De Niro", 
+        "Ray Liotta", 
+        "Joe Pesci"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "The Matrix",
+   "Year": "(1999)",
+   "Rating": "8.7",
+   "Genre": "action",
+   "Actors": [
+        "Keanu Reeves", 
+        "Laurence Fishburne", 
+        "Carrie-Anne Moss"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "Seven Samurai",
+   "Year": "(1954)",
+   "Rating": "8.6",
+   "Genre": "drama",
+   "Actors": [
+        "Toshirô Mifune", 
+        "Takashi Shimura", 
+        "Keiko Tsushima"
+   ], 
+   "Seen": false
+ },
+ {
+   "Title": "Star Wars: Episode IV - A New Hope",
+   "Year": "(1977)",
+   "Rating": "8.6",
+   "Genre": "action",
+   "Actors": [
+        "Mark Hamill", 
+        "Harrison Ford", 
+        "Carrie Fisher"
+   ], 
+   "Seen": false
+ }
+]
