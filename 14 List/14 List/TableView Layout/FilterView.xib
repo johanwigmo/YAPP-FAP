@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterView" customModule="_4_Lists_Pre" customModuleProvider="target">
+            <connections>
+                <outlet property="leftButton" destination="tyx-bi-KVR" id="U3e-jy-lp7"/>
+                <outlet property="rightButton" destination="zVY-xC-8dc" id="4yY-1h-HdR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyx-bi-KVR">
+                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
+                    <state key="normal" title="List">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="EqE-TN-KtW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVY-xC-8dc">
+                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
+                    <state key="normal" title="Grouped">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="net-Vl-Yyz"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="tyx-bi-KVR" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="3Jl-tF-Sg5"/>
+                <constraint firstItem="zVY-xC-8dc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="897-d3-60L"/>
+                <constraint firstItem="tyx-bi-KVR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Qfl-qF-4ol"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zVY-xC-8dc" secondAttribute="trailing" id="WXM-uY-nTl"/>
+                <constraint firstItem="zVY-xC-8dc" firstAttribute="width" secondItem="tyx-bi-KVR" secondAttribute="width" id="hZQ-8Q-B5Q"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="tyx-bi-KVR" secondAttribute="bottom" id="la1-2f-agL"/>
+                <constraint firstItem="zVY-xC-8dc" firstAttribute="leading" secondItem="tyx-bi-KVR" secondAttribute="trailing" id="nPR-yq-iVv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="zVY-xC-8dc" secondAttribute="bottom" id="oJu-GR-nyt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="138.40000000000001" y="-100.74962518740631"/>
+        </view>
+    </objects>
+</document>

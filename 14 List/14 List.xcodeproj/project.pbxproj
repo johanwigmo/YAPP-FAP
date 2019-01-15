@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D706428421EE1A5300B19A0D /* FilterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706427A21EE1A5200B19A0D /* FilterType.swift */; };
+		D706428521EE1A5300B19A0D /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706427B21EE1A5200B19A0D /* CollectionView.swift */; };
+		D706428621EE1A5300B19A0D /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D706427C21EE1A5300B19A0D /* MovieCollectionViewCell.xib */; };
+		D706428721EE1A5300B19A0D /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706427D21EE1A5300B19A0D /* MovieCollectionViewCell.swift */; };
+		D706428821EE1A5300B19A0D /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706427E21EE1A5300B19A0D /* FilterView.swift */; };
+		D706428921EE1A5300B19A0D /* ListLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706427F21EE1A5300B19A0D /* ListLayoutViewController.swift */; };
+		D706428A21EE1A5300B19A0D /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D706428021EE1A5300B19A0D /* FilterView.xib */; };
+		D706428B21EE1A5300B19A0D /* ListLayoutDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706428121EE1A5300B19A0D /* ListLayoutDataProvider.swift */; };
+		D706428C21EE1A5300B19A0D /* MovieCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706428221EE1A5300B19A0D /* MovieCollectionTableViewCell.swift */; };
+		D706428D21EE1A5300B19A0D /* MovieCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D706428321EE1A5300B19A0D /* MovieCollectionTableViewCell.xib */; };
 		D71843F221EC80D7009AE4BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71843F121EC80D7009AE4BF /* AppDelegate.swift */; };
 		D71843F421EC80D7009AE4BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71843F321EC80D7009AE4BF /* ViewController.swift */; };
 		D71843F721EC80D7009AE4BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D71843F521EC80D7009AE4BF /* Main.storyboard */; };
@@ -26,6 +36,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D706427A21EE1A5200B19A0D /* FilterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterType.swift; sourceTree = "<group>"; };
+		D706427B21EE1A5200B19A0D /* CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		D706427C21EE1A5300B19A0D /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
+		D706427D21EE1A5300B19A0D /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		D706427E21EE1A5300B19A0D /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		D706427F21EE1A5300B19A0D /* ListLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListLayoutViewController.swift; sourceTree = "<group>"; };
+		D706428021EE1A5300B19A0D /* FilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
+		D706428121EE1A5300B19A0D /* ListLayoutDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListLayoutDataProvider.swift; sourceTree = "<group>"; };
+		D706428221EE1A5300B19A0D /* MovieCollectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionTableViewCell.swift; sourceTree = "<group>"; };
+		D706428321EE1A5300B19A0D /* MovieCollectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieCollectionTableViewCell.xib; sourceTree = "<group>"; };
 		D71843EE21EC80D7009AE4BF /* 14 List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "14 List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71843F121EC80D7009AE4BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D71843F321EC80D7009AE4BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +77,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D706427921EE1A3500B19A0D /* TableView Layout */ = {
+			isa = PBXGroup;
+			children = (
+				D706427B21EE1A5200B19A0D /* CollectionView.swift */,
+				D706427A21EE1A5200B19A0D /* FilterType.swift */,
+				D706427E21EE1A5300B19A0D /* FilterView.swift */,
+				D706428021EE1A5300B19A0D /* FilterView.xib */,
+				D706428121EE1A5300B19A0D /* ListLayoutDataProvider.swift */,
+				D706427F21EE1A5300B19A0D /* ListLayoutViewController.swift */,
+				D706428221EE1A5300B19A0D /* MovieCollectionTableViewCell.swift */,
+				D706428321EE1A5300B19A0D /* MovieCollectionTableViewCell.xib */,
+				D706427D21EE1A5300B19A0D /* MovieCollectionViewCell.swift */,
+				D706427C21EE1A5300B19A0D /* MovieCollectionViewCell.xib */,
+			);
+			path = "TableView Layout";
+			sourceTree = "<group>";
+		};
 		D71843E521EC80D7009AE4BF = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +119,7 @@
 				D718440721EC8A01009AE4BF /* Movies */,
 				D718441621ECAD7F009AE4BF /* CollectionView */,
 				D718441921ECB50D009AE4BF /* Custom CollectionView Layout */,
+				D706427921EE1A3500B19A0D /* TableView Layout */,
 				D71843F521EC80D7009AE4BF /* Main.storyboard */,
 				D71843F821EC80D8009AE4BF /* Assets.xcassets */,
 				D71843FA21EC80D8009AE4BF /* LaunchScreen.storyboard */,
@@ -195,11 +233,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D706428D21EE1A5300B19A0D /* MovieCollectionTableViewCell.xib in Resources */,
 				D71843FC21EC80D8009AE4BF /* LaunchScreen.storyboard in Resources */,
 				D718441521EC8DB6009AE4BF /* MovieTableViewCell.xib in Resources */,
 				D71843F921EC80D8009AE4BF /* Assets.xcassets in Resources */,
+				D706428A21EE1A5300B19A0D /* FilterView.xib in Resources */,
 				D718440F21EC8BA3009AE4BF /* movies.json in Resources */,
 				D71843F721EC80D7009AE4BF /* Main.storyboard in Resources */,
+				D706428621EE1A5300B19A0D /* MovieCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,15 +253,22 @@
 			files = (
 				D718441821ECADBB009AE4BF /* CollectionViewController.swift in Sources */,
 				D718440B21EC8AC3009AE4BF /* MoviesDataProvider.swift in Sources */,
+				D706428921EE1A5300B19A0D /* ListLayoutViewController.swift in Sources */,
 				D718441121EC8BAA009AE4BF /* MovieFactory.swift in Sources */,
 				D71843F421EC80D7009AE4BF /* ViewController.swift in Sources */,
 				D718441D21ECB590009AE4BF /* CustomLayout.swift in Sources */,
+				D706428521EE1A5300B19A0D /* CollectionView.swift in Sources */,
 				D718440D21EC8B12009AE4BF /* Movie.swift in Sources */,
+				D706428B21EE1A5300B19A0D /* ListLayoutDataProvider.swift in Sources */,
 				D71843F221EC80D7009AE4BF /* AppDelegate.swift in Sources */,
+				D706428C21EE1A5300B19A0D /* MovieCollectionTableViewCell.swift in Sources */,
 				D718440421EC8519009AE4BF /* ListViewController.swift in Sources */,
 				D718441B21ECB521009AE4BF /* CustomCollectionViewController.swift in Sources */,
 				D718441421EC8DB6009AE4BF /* MovieTableViewCell.swift in Sources */,
+				D706428721EE1A5300B19A0D /* MovieCollectionViewCell.swift in Sources */,
 				D718440921EC8A2A009AE4BF /* MoviesViewController.swift in Sources */,
+				D706428821EE1A5300B19A0D /* FilterView.swift in Sources */,
+				D706428421EE1A5300B19A0D /* FilterType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
