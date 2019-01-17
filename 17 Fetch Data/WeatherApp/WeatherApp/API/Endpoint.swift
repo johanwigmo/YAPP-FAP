@@ -57,6 +57,8 @@ enum Endpoint {
         
         }
         
+        components.queryItems?.append(URLQueryItem(name: "appid", value: "KEY"))
+        
         guard let url = components.url else {
             fatalError("ERROR - ApiManager.baseUrl is not a valid URL")
         }

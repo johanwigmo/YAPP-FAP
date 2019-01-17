@@ -16,4 +16,21 @@ class CurrentService {
         self.api = apiService
     }
     
+    func weather(city: String, success: @escaping (CurrentWeather) -> Void, failure: @escaping (ApiError) -> Void) {
+        api.request(endpoint: .currentByCity(city: city)) { (data) in
+            guard let data = data else {
+                failure(ApiError.weatherCityName)
+                return
+            }
+            
+            do {
+                let weather = try JSONDecoder().decode(CurrentWeather.self, from: data)
+                success(weather)
+            } catch let error {
+                print(error.localizedDescription)
+                failure(ApiError.weatherCityName)
+            }
+        }
+    }
+    
 }

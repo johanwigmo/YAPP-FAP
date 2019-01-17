@@ -18,6 +18,15 @@ class MainViewController: UIViewController {
         addBackground()
         
         tableView.isHidden = true
+        
+        
+        ApiManager.shared.current.weather(city: "London", success: { (weather) in
+            print(weather)
+        }, failure: { (error) in 
+            
+            print(error.description)
+            
+        })
     }
     
     private func addBackground() {
@@ -35,7 +44,9 @@ class MainViewController: UIViewController {
                 print("No text from Add City Search")
                 return
             }
-            print(city)
+            
+            AppDefaults.addCity(id: city)
+            
         }
         present(alert, animated: true, completion: nil)
     }

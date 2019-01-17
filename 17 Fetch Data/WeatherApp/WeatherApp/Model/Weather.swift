@@ -6,7 +6,7 @@
 //  Copyright © 2019 Wigmo Productions. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Weather: Decodable {
     
@@ -14,5 +14,15 @@ struct Weather: Decodable {
     let main: String
     let description: String
     let icon: String
+    
+}
+
+extension Weather {
+    
+    var iconImage: UIImage? {
+        guard let url = URL(string: "https://openweathermap.org/img/w/\(icon).png") else { return nil }
+        guard let data = try? Data(contentsOf: url) else { return nil }
+        return UIImage(data: data)
+    }
     
 }
