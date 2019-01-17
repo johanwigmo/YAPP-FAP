@@ -19,13 +19,15 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addBackground()
-        showTableViewIfNeeded()
         
         manager.delegate = self
         dataProvider = MainDataProvider(cityManager: manager)
         
         tableView.dataSource = dataProvider
         tableView.delegate = dataProvider
+        tableView.register(MainCityCell.getNib(), forCellReuseIdentifier: MainCityCell.identifier)
+        
+        showTableViewIfNeeded()
     }
     
     private func addBackground() {
@@ -61,6 +63,7 @@ extension MainViewController: CityManagerDelegate {
     
     func cityManagerDidUpdate() {
         showTableViewIfNeeded()
+        print("CityManager did update")
     }
     
 }

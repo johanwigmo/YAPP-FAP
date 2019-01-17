@@ -33,7 +33,11 @@ class CityManager {
     
     private init() {
         self.cities = AppDefaults.cities
-        // TODO: Fetch current weather for all cities
+        
+        
+        for city in self.cities {
+            weather(for: city)
+        }
     }
     
     func addCity(by name: String) {
@@ -43,9 +47,23 @@ class CityManager {
             self.cities.append(city)
 
         }, failure: { (error) in
-            print(error)
+            print(error.description)
         })
         
+    }
+    
+    func weather(for city: City) {
+        ApiManager.shared.current.weather(id: city.id, success: { (newCity) in
+            
+            if let index = self.cities.firstIndex(of: city) {
+                self.cities[index] = newCity
+            } else {
+                self.cities.append(newCity)
+            }
+            
+        }, failure: { (error) in
+            print(error.description)
+        })
     }
     
     func city(at index: Int) -> City {

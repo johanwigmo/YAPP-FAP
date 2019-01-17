@@ -10,11 +10,11 @@ import Foundation
 
 struct Main: Decodable {
     
-    let temperature: Double
-    let pressure: Int
-    let humidity: Int
-    let tempMin: Double
-    let tempMax: Double
+    let temperature: Double?
+    let pressure: Int?
+    let humidity: Int?
+    let tempMin: Double?
+    let tempMax: Double?
     
     enum CodingKeys: String, CodingKey {
         case pressure, humidity

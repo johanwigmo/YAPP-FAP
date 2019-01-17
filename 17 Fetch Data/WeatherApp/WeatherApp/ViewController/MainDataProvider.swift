@@ -26,14 +26,13 @@ extension MainDataProvider: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MainCityCell.identifier, for: indexPath) as? MainCityCell else {
+            fatalError("Could not deqeue MainCityCell")
         }
         
-        cell?.textLabel?.text = manager.city(at: indexPath.row).name
+        cell.config(city: manager.city(at: indexPath.row))
         
-        return cell!
+        return cell
     }
     
 }

@@ -12,7 +12,7 @@ enum Endpoint {
     
     // Current
     case currentByCity(city: String)
-    case currentById(id: String)
+    case currentById(id: Int)
     case currentByCoord(lat: Double, lon: Double)
   
     // Forecast
@@ -33,7 +33,7 @@ enum Endpoint {
             
         case .currentById(let id):
             components.path.append("weather")
-            components.queryItems = [URLQueryItem(name: "id", value: id)]
+            components.queryItems = [URLQueryItem(name: "id", value: "\(id)")]
             
         case .currentByCoord(let lat, let lon):
             components.path.append("weather")
@@ -53,10 +53,10 @@ enum Endpoint {
             components.path.append("forecast")
             components.queryItems = [URLQueryItem(name: "lat", value: String(lat)),
                                      URLQueryItem(name: "lon", value: String(lon))]
-            
         
         }
         
+        components.queryItems?.append(URLQueryItem(name: "units", value: "metric"))
         components.queryItems?.append(URLQueryItem(name: "appid", value: Token.shared.openWeatherMapApi))
         
         guard let url = components.url else {

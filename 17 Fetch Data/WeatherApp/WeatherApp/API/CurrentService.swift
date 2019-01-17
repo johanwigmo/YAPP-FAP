@@ -33,4 +33,21 @@ class CurrentService {
         }
     }
     
+    func weather(id: Int, success: @escaping (City) -> Void, failure: @escaping (ApiError) -> Void) {
+        api.request(endpoint: .currentById(id: id)) { (data) in
+            guard let data = data else {
+                failure(ApiError.weatherCityName)
+                return
+            }
+            
+            do {
+                let weather = try JSONDecoder().decode(City.self, from: data)
+                success(weather)
+            } catch let error {
+                print(error.localizedDescription)
+                failure(ApiError.weatherCityName)
+            }
+        }
+    }
+    
 }

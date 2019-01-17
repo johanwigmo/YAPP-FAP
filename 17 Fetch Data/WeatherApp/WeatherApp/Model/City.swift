@@ -17,9 +17,6 @@ struct City: Equatable, Decodable {
     var weather: [Weather]?
     var main: Main?
     var wind: Wind?
-    var clouds: Clouds?
-    var rain: Rain?
-    var snow: Snow?
     
     init(name: String, id: Int) {
         self.name = name
@@ -28,7 +25,7 @@ struct City: Equatable, Decodable {
     
     enum CodingKeys: String, CodingKey {
         case coordinate = "coord"
-        case name, id, weather, main, wind, clouds, rain, snow
+        case name, id, weather, main, wind
     }
     
     static func==(lhs: City, rhs: City) -> Bool {

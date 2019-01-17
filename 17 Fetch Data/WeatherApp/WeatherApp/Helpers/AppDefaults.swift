@@ -10,8 +10,18 @@ import Foundation
 
 class AppDefaults {
     
-    enum Key: String {
+    enum Key: String, CaseIterable {
         case cities = "cities"
+    }
+    
+    class func removeAll(exclude: [Key] = []) {
+        for key in Key.allCases {
+            if !exclude.contains(key) { remove(key: key) }
+        }
+    }
+    
+    class func remove(key: Key) {
+        UserDefaults.standard.removeObject(forKey: key.rawValue)
     }
     
 }
