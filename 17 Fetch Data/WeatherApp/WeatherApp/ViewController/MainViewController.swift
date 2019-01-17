@@ -13,20 +13,19 @@ class MainViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    let manager = CityManager.shared
+    var dataProvider: MainDataProvider?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addBackground()
+        showTableViewIfNeeded()
         
-        tableView.isHidden = true
+        manager.delegate = self
+        dataProvider = MainDataProvider(cityManager: manager)
         
-        
-        ApiManager.shared.current.weather(city: "London", success: { (weather) in
-            print(weather)
-        }, failure: { (error) in 
-            
-            print(error.description)
-            
-        })
+        tableView.dataSource = dataProvider
+        tableView.delegate = dataProvider
     }
     
     private func addBackground() {
@@ -38,6 +37,12 @@ class MainViewController: UIViewController {
         view.insertSubview(imageView, at: 0)
     }
     
+    private func showTableViewIfNeeded() {
+        tableView.isHidden = manager.cityCount == 0
+        addButton.isHidden = manager.cityCount != 0
+        tableView.reloadData()
+    }
+    
     @IBAction func addCity() {
         let alert = AlertFactory.addCity { (text) in
             guard let city = text else {
@@ -45,10 +50,17 @@ class MainViewController: UIViewController {
                 return
             }
             
-            AppDefaults.addCity(id: city)
-            
+            self.manager.addCity(by: city)
         }
         present(alert, animated: true, completion: nil)
+    }
+    
+}
+
+extension MainViewController: CityManagerDelegate {
+    
+    func cityManagerDidUpdate() {
+        showTableViewIfNeeded()
     }
     
 }

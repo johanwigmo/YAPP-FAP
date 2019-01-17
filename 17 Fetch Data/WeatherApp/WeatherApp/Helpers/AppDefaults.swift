@@ -18,27 +18,42 @@ class AppDefaults {
 
 extension AppDefaults {
     
-    static var cities: [String] {
+    static var cities: [City] {
         get {
-            if let cities = UserDefaults.standard.array(forKey: Key.cities.rawValue) as? [String] {
+            if let cityStrings = UserDefaults.standard.array(forKey: Key.cities.rawValue) as? [String] {
+                var cities = [City]()
+                for text in cityStrings {
+                    let components = text.components(separatedBy: "_")
+                    guard let id = components.first, let name = components.last else { continue }
+                    let city = City(name: name, id: Int(id)!)
+                    cities.append(city)
+                }
                 return cities
             } else {
                 return []
             }
         }
-        set { UserDefaults.standard.set(newValue, forKey: Key.cities.rawValue) }
+        set {
+            var citiesToSave = [String]()
+            for city in newValue {
+                citiesToSave.append("\(city.id)_\(city.name)")
+            }
+            
+            UserDefaults.standard.set(citiesToSave, forKey: Key.cities.rawValue)
+        }
     }
     
 }
 
 extension AppDefaults {
     
-    class func addCity(id: String) {
+    class func addCity(id: City) {
+        
         guard cities.firstIndex(of: id) == nil else { return }
         cities.append(id)
     }
     
-    class func removeCity(id: String) -> String? {
+    class func removeCity(id: City) -> City? {
         guard let index = cities.firstIndex(of: id) else { return nil }
         return cities.remove(at: index)
     }
