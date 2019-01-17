@@ -15,7 +15,16 @@ protocol CityManagerDelegate: class {
 extension CityManager {
     
     var cityCount: Int { return cities.count }
-
+    
+    func city(at index: Int) -> City? {
+        guard cityCount > index else { return nil }
+        return cities[index]
+    }
+    
+    func removeCity(at index: Int) -> City? {
+        guard cityCount > index else { return nil }
+        return cities.remove(at: index)
+    }
 }
 
 class CityManager {
@@ -25,6 +34,7 @@ class CityManager {
     private var cities: [City] = [] {
         didSet {
             AppDefaults.cities = cities
+            // FIXME: delegate will spam in e.g. refreshWeatherForAllCities
             delegate?.cityManagerDidUpdate()
         }
     }
@@ -33,11 +43,7 @@ class CityManager {
     
     private init() {
         self.cities = AppDefaults.cities
-        
-        
-        for city in self.cities {
-            weather(for: city)
-        }
+        refreshWeatherForAllCities()
     }
     
     func addCity(by name: String) {
@@ -52,7 +58,15 @@ class CityManager {
         
     }
     
-    func weather(for city: City) {
+    func refreshWeatherForAllCities(completion: (() -> Void)? = nil) {
+        for city in self.cities {
+            weather(for: city)
+        }
+        // MARK: delegate will also tell when cities are updated
+        completion?()
+    }
+    
+    private func weather(for city: City) {
         ApiManager.shared.current.weather(id: city.id, success: { (newCity) in
             
             if let index = self.cities.firstIndex(of: city) {
@@ -66,8 +80,6 @@ class CityManager {
         })
     }
     
-    func city(at index: Int) -> City {
-        return cities[index]
-    }
+
     
 }

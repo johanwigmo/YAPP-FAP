@@ -13,8 +13,15 @@ class MainViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
-    let manager = CityManager.shared
-    var dataProvider: MainDataProvider?
+    private let manager = CityManager.shared
+    private var dataProvider: MainDataProvider?
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let control = UIRefreshControl()
+        control.tintColor = .black
+        control.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        return control
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +34,7 @@ class MainViewController: UIViewController {
         tableView.delegate = dataProvider
         tableView.register(MainCityCell.getNib(), forCellReuseIdentifier: MainCityCell.identifier)
         
+        tableView.addSubview(refreshControl)
         showTableViewIfNeeded()
     }
     
@@ -43,6 +51,13 @@ class MainViewController: UIViewController {
         tableView.isHidden = manager.cityCount == 0
         addButton.isHidden = manager.cityCount != 0
         tableView.reloadData()
+    }
+    
+    @objc
+    func refresh() {
+        manager.refreshWeatherForAllCities {
+            self.refreshControl.endRefreshing()
+        }
     }
     
     @IBAction func addCity() {
@@ -63,7 +78,6 @@ extension MainViewController: CityManagerDelegate {
     
     func cityManagerDidUpdate() {
         showTableViewIfNeeded()
-        print("CityManager did update")
     }
     
 }

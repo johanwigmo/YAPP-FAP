@@ -30,13 +30,26 @@ extension MainDataProvider: UITableViewDataSource {
             fatalError("Could not deqeue MainCityCell")
         }
         
-        cell.config(city: manager.city(at: indexPath.row))
+        if let city = manager.city(at: indexPath.row) {
+            cell.config(city: city)
+        }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else { return }
+        
+        guard manager.removeCity(at: indexPath.row) != nil else { return }
     }
     
 }
 
 extension MainDataProvider: UITableViewDelegate {
+    
     
 }
