@@ -57,7 +57,7 @@ enum Endpoint {
         
         }
         
-        components.queryItems?.append(URLQueryItem(name: "appid", value: "KEY"))
+        components.queryItems?.append(URLQueryItem(name: "appid", value: Token.shared.openWeatherMapApi))
         
         guard let url = components.url else {
             fatalError("ERROR - ApiManager.baseUrl is not a valid URL")
