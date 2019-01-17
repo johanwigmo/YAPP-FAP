@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:WeahterApp.xcodeproj">
+      location = "self:/Users/johanwigmo/Developer/Newton/17 Fetch Data/WeahterApp/WeatherApp.xcodeproj">
    </FileRef>
 </Workspace>
