@@ -21,12 +21,6 @@ class MainCityCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var weatherImageView: UIImageView!
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        nameLabel.text = nil
-        descriptionLabel.text = nil
-    }
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -37,7 +31,7 @@ class MainCityCell: UITableViewCell {
     func config(city: City) {
         nameLabel.text = city.name
         if let temperature = city.main?.temperature, let desc = city.weather?.first?.description {
-            descriptionLabel.text = "\(temperature) °C - \(desc.capitalized)"
+            descriptionLabel.text = "\(Int(temperature.rounded())) °C - \(desc.capitalized)"
         } else {
             descriptionLabel.text = nil
         }

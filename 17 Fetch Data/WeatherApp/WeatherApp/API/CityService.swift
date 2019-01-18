@@ -1,5 +1,5 @@
 //
-//  CurrentService.swift
+//  CityService.swift
 //  WeahterApp
 //
 //  Created by Johan Wigmo on 2019-01-17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CurrentService {
+class CityService {
     
     let api: ApiService
     

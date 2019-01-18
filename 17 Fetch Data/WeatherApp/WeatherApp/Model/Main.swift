@@ -11,8 +11,8 @@ import Foundation
 struct Main: Decodable {
     
     let temperature: Double?
-    let pressure: Int?
-    let humidity: Int?
+    let pressure: Double?
+    let humidity: Double?
     let tempMin: Double?
     let tempMax: Double?
     

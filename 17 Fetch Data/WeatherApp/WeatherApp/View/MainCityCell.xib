@@ -12,17 +12,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="261" id="KGk-i7-Jjw" customClass="MainCityCell" customModule="WeatherApp" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="261" id="KGk-i7-Jjw" customClass="MainCityCell" customModule="WeatherApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="87.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tv9-hf-eYQ">
-                        <rect key="frame" x="5" y="5" width="310" height="77"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="693-kS-tMR">
                         <rect key="frame" x="5" y="5" width="310" height="77"/>
                         <subviews>
@@ -46,7 +42,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="XUh-6j-U9m" secondAttribute="bottom" constant="5" id="Bow-LQ-Lpn"/>
                             <constraint firstItem="jRL-6v-EHR" firstAttribute="top" secondItem="693-kS-tMR" secondAttribute="top" constant="10" id="CBW-nZ-8G2"/>
@@ -62,20 +58,16 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="tv9-hf-eYQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="6aK-GO-aLl"/>
-                    <constraint firstItem="693-kS-tMR" firstAttribute="top" secondItem="tv9-hf-eYQ" secondAttribute="top" id="98d-Mc-Ss8"/>
-                    <constraint firstItem="tv9-hf-eYQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="DqA-Dv-LcF"/>
-                    <constraint firstItem="693-kS-tMR" firstAttribute="trailing" secondItem="tv9-hf-eYQ" secondAttribute="trailing" id="S7V-nd-ush"/>
-                    <constraint firstItem="693-kS-tMR" firstAttribute="bottom" secondItem="tv9-hf-eYQ" secondAttribute="bottom" id="SaD-d5-QF2"/>
-                    <constraint firstAttribute="trailing" secondItem="tv9-hf-eYQ" secondAttribute="trailing" constant="5" id="Vut-4V-93Z"/>
-                    <constraint firstAttribute="bottom" secondItem="tv9-hf-eYQ" secondAttribute="bottom" constant="5.5" id="ZWQ-9n-LTo"/>
-                    <constraint firstItem="693-kS-tMR" firstAttribute="leading" secondItem="tv9-hf-eYQ" secondAttribute="leading" id="iQb-cf-dDB"/>
+                    <constraint firstAttribute="bottom" secondItem="693-kS-tMR" secondAttribute="bottom" constant="5.5" id="3Vp-iK-HGe"/>
+                    <constraint firstItem="693-kS-tMR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="NWA-5X-YLe"/>
+                    <constraint firstItem="693-kS-tMR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="uT8-OE-cbV"/>
+                    <constraint firstAttribute="trailing" secondItem="693-kS-tMR" secondAttribute="trailing" constant="5" id="yVU-ne-a2C"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="blackView" destination="tv9-hf-eYQ" id="egD-hT-951"/>
+                <outlet property="blackView" destination="693-kS-tMR" id="w8J-BV-nsY"/>
                 <outlet property="descriptionLabel" destination="XUh-6j-U9m" id="WEX-n3-bs3"/>
                 <outlet property="nameLabel" destination="jRL-6v-EHR" id="QmW-HK-3h3"/>
                 <outlet property="weatherImageView" destination="cYT-p2-Xbk" id="GXR-Uh-wce"/>

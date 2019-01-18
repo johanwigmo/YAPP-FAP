@@ -1,6 +1,6 @@
 //
-//  Segue.swift
-//  WeahterApp
+//  ForecastResult.swift
+//  WeatherApp
 //
 //  Created by Johan Wigmo on 2019-01-17.
 //  Copyright © 2019 Wigmo Productions. All rights reserved.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum Segue {
+struct ForecastResult: Decodable {
     
-    static let mainToForecast = "segueMainToForecast"
+    let list: [Forecast]
     
 }

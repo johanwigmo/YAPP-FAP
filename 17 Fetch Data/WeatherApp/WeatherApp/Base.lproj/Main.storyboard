@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--WeatherApp-->
+        <!--Cities-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="prJ-Bi-3Ns">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZ2-IQ-IVI">
                                 <rect key="frame" x="110.5" y="308" width="154" height="51"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
@@ -28,23 +32,19 @@
                                     <action selector="addCity" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsw-UE-ukv"/>
                                 </connections>
                             </button>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="prJ-Bi-3Ns">
-                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="prJ-Bi-3Ns" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="48x-23-bR3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="prJ-Bi-3Ns" secondAttribute="bottom" id="Yds-Fz-khw"/>
                             <constraint firstItem="GZ2-IQ-IVI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="blK-WH-9oc"/>
+                            <constraint firstItem="prJ-Bi-3Ns" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nV8-Pg-2RR"/>
                             <constraint firstItem="GZ2-IQ-IVI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ouB-91-7vo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="prJ-Bi-3Ns" secondAttribute="trailing" id="uPm-e5-gUV"/>
                             <constraint firstItem="prJ-Bi-3Ns" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wbX-25-QWn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="WeatherApp" id="Hzt-Cm-0Vj">
+                    <navigationItem key="navigationItem" title="Cities" id="Hzt-Cm-0Vj">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lm8-pl-gnJ">
                             <connections>
                                 <action selector="addCity" destination="BYZ-38-t0r" id="XCa-rQ-Noe"/>
@@ -54,27 +54,49 @@
                     <connections>
                         <outlet property="addButton" destination="GZ2-IQ-IVI" id="Obd-Ir-1e2"/>
                         <outlet property="tableView" destination="prJ-Bi-3Ns" id="Uk8-te-ilV"/>
-                        <segue destination="g2p-YB-BsB" kind="show" identifier="segueMainToDetail" id="ITI-Ky-BJU"/>
+                        <segue destination="g2p-YB-BsB" kind="show" identifier="segueMainToForecast" id="ITI-Ky-BJU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1020" y="27.436281859070466"/>
         </scene>
-        <!--View Controller-->
+        <!--Forecast View Controller-->
         <scene sceneID="ctJ-pj-Epj">
             <objects>
-                <viewController id="g2p-YB-BsB" sceneMemberID="viewController">
+                <viewController id="g2p-YB-BsB" customClass="ForecastViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ooQ-7n-52U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="60" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="clx-e3-LSX">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="118-gB-0TB">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="clx-e3-LSX" firstAttribute="leading" secondItem="uyy-Z8-jsM" secondAttribute="leading" id="765-fi-heC"/>
+                            <constraint firstItem="clx-e3-LSX" firstAttribute="top" secondItem="uyy-Z8-jsM" secondAttribute="top" id="Hci-gf-rMN"/>
+                            <constraint firstItem="uyy-Z8-jsM" firstAttribute="trailing" secondItem="clx-e3-LSX" secondAttribute="trailing" id="fCd-6p-xmY"/>
+                            <constraint firstAttribute="bottom" secondItem="clx-e3-LSX" secondAttribute="bottom" id="s8O-7u-eag"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uyy-Z8-jsM"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="clx-e3-LSX" id="bJN-gi-OGs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aoi-GZ-vLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2209" y="636"/>
+            <point key="canvasLocation" x="1865" y="27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FdO-rY-okJ">
@@ -84,7 +106,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="NrC-RQ-KOp">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -96,5 +125,5 @@
             <point key="canvasLocation" x="169" y="27"/>
         </scene>
     </scenes>
-    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

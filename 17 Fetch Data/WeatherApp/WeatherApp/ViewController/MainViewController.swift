@@ -28,7 +28,7 @@ class MainViewController: UIViewController {
         addBackground()
         
         manager.delegate = self
-        dataProvider = MainDataProvider(cityManager: manager)
+        dataProvider = MainDataProvider(cityManager: manager, delegate: self)
         
         tableView.dataSource = dataProvider
         tableView.delegate = dataProvider
@@ -38,13 +38,14 @@ class MainViewController: UIViewController {
         showTableViewIfNeeded()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? ForecastViewController, let city = sender as? City {
+            vc.city = city
+        }
+    }
+    
     private func addBackground() {
-        guard let image = UIImage(named: "background") else { fatalError() }
-        let imageView = UIImageView(image: image)
-        imageView.contentMode = .scaleAspectFill
-        imageView.frame = view.bounds
-        imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.insertSubview(imageView, at: 0)
+        view.insertSubview(ViewFactory.background(to: view), at: 0)
     }
     
     private func showTableViewIfNeeded() {
@@ -70,6 +71,14 @@ class MainViewController: UIViewController {
             self.manager.addCity(by: city)
         }
         present(alert, animated: true, completion: nil)
+    }
+    
+}
+
+extension MainViewController: MainDataProviderDelegate {
+    
+    func mainDataProviderDidSelect(city: City) {
+        performSegue(withIdentifier: Segue.mainToForecast, sender: city)
     }
     
 }

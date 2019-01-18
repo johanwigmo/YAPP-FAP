@@ -49,7 +49,7 @@ class CityManager {
     func addCity(by name: String) {
         guard !cities.contains(where: { $0.name == name }) else { return }
         
-        ApiManager.shared.current.weather(city: name, success: { (city) in
+        ApiManager.shared.city.weather(city: name, success: { (city) in
             self.cities.append(city)
 
         }, failure: { (error) in
@@ -67,7 +67,7 @@ class CityManager {
     }
     
     private func weather(for city: City) {
-        ApiManager.shared.current.weather(id: city.id, success: { (newCity) in
+        ApiManager.shared.city.weather(id: city.id, success: { (newCity) in
             
             if let index = self.cities.firstIndex(of: city) {
                 self.cities[index] = newCity

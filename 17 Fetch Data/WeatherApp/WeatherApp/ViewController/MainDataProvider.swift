@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol MainDataProviderDelegate: class {
+    func mainDataProviderDidSelect(city: City)
+}
+
 class MainDataProvider: NSObject {
     
     let manager: CityManager
+    var delegate: MainDataProviderDelegate?
     
-    init(cityManager: CityManager) {
+    init(cityManager: CityManager, delegate: MainDataProviderDelegate? = nil) {
         self.manager = cityManager
+        self.delegate = delegate
         super.init()
     }
     
@@ -51,5 +57,10 @@ extension MainDataProvider: UITableViewDataSource {
 
 extension MainDataProvider: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let city = manager.city(at: indexPath.row) else { return }
+        delegate?.mainDataProviderDidSelect(city: city)
+    }
     
 }

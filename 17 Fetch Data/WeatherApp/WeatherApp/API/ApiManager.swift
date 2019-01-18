@@ -15,12 +15,12 @@ class ApiManager {
     static let baseUrl = "https://api.openweathermap.org/data/2.5/"
     
     let api: ApiService
-    let current: CurrentService
+    let city: CityService
     let forecast: ForecastService
     
     init() {
         self.api = ApiService()
-        self.current = CurrentService(apiService: api)
+        self.city = CityService(apiService: api)
         self.forecast = ForecastService(apiService: api)
     }
     

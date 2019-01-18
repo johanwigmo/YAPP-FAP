@@ -12,20 +12,20 @@ enum ApiError: Error {
     
     case weatherCityName
     case weatherCityId
-    case weatherCityCoord
+//    case weatherCityCoord
     
-    case forecastCityName
+//    case forecastCityName
     case forecastCityId
-    case forecastCityCoord
+//    case forecastCityCoord
     
     var description: String {
         switch self {
         case .weatherCityName: return "Could not fetch weather by name"
         case .weatherCityId: return "Could not fetch weather by id"
-        case .weatherCityCoord: return "Could not fetch weather by coords"
-        case .forecastCityName: return "Could not fetch forecast by name"
+//        case .weatherCityCoord: return "Could not fetch weather by coords"
+//        case .forecastCityName: return "Could not fetch forecast by name"
         case .forecastCityId: return "Could not fetch forecast by id"
-        case .forecastCityCoord: return "Could not fetch forecast by coords"
+//        case .forecastCityCoord: return "Could not fetch forecast by coords"
         }
     }
     
