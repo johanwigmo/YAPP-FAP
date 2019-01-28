@@ -56,6 +56,8 @@ class Calculator {
             
         case .zero, .one, .two, .three, .four,
              .five, .six, .seven, .eight, .nine: addNumber(from: type)
+        
+        case .decimal: addDecimal()
             
         case .equalTo: calculate()
             
@@ -85,6 +87,22 @@ class Calculator {
         }
     }
     
+    private func addDecimal() {
+        if operation == nil {
+            addDecimal(in: &firstValue)
+        } else {
+            addDecimal(in: &secondValue)
+        }
+    }
+    
+    private func addDecimal(in value: inout String) {
+        if value == "" {
+            value.append("0.")
+        } else {
+            value.append(".")
+        }
+    }
+    
     private func calculate() {
         guard let first = Double(firstValue), let second = Double(secondValue), let operation = operation else {
             return
@@ -93,6 +111,22 @@ class Calculator {
         switch operation {
         case .addition:
             let value = add(value: second, to: first)
+            firstValue = String(format: "%g", value)
+            secondValue = ""
+            
+        case .subtract:
+            let value = subtract(value: second, from: first)
+            firstValue = String(format: "%g", value)
+            secondValue = ""
+            
+        case .multiply:
+            let value = multiply(value: first, with: second)
+            firstValue = String(format: "%g", value)
+            secondValue = ""
+            
+            
+        case .division:
+            let value = divide(value: first, with: second)
             firstValue = String(format: "%g", value)
             secondValue = ""
             
@@ -108,7 +142,15 @@ class Calculator {
     }
     
     private func subtract(value: Double, from: Double) -> Double {
-        return 0
+        return from - value
+    }
+    
+    private func multiply(value: Double, with: Double) -> Double {
+        return value * with
+    }
+    
+    private func divide(value: Double, with: Double) -> Double {
+        return value / with
     }
     
 }

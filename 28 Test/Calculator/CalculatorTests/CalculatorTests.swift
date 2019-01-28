@@ -86,6 +86,40 @@ class CalculatorTests: XCTestCase {
         
         XCTAssertEqual(sut.displayText, "4")
     }
+    
+    func testSubtract() {
+        sut.input(type: ButtonType.four)
+        sut.input(type: ButtonType.subtract)
+        sut.input(type: ButtonType.two)
+        sut.input(type: ButtonType.equalTo)
+        
+        XCTAssertEqual(sut.displayText, "2")
+    }
+    
+    func testMultiply() {
+        sut.input(type: ButtonType.four)
+        sut.input(type: ButtonType.multiply)
+        sut.input(type: ButtonType.two)
+        sut.input(type: ButtonType.equalTo)
+        
+        XCTAssertEqual(sut.displayText, "8")
+    }
+    
+    func testDivision() {
+        sut.input(type: ButtonType.four)
+        sut.input(type: ButtonType.division)
+        sut.input(type: ButtonType.two)
+        sut.input(type: ButtonType.equalTo)
+        
+        XCTAssertEqual(sut.displayText, "2")
+    }
+    
+    func testDecimal() {
+        sut.input(type: ButtonType.four)
+        sut.input(type: .decimal)
+        sut.input(type: ButtonType.four)
+        XCTAssertEqual(sut.displayText, "4.4")
+    }
 
 }
 
