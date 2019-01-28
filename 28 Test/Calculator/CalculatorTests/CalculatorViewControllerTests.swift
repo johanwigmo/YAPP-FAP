@@ -22,6 +22,7 @@ class CalculatorViewControllerTests: XCTestCase {
     }
 
     override func tearDown() {
+        sut = nil
         super.tearDown()
     }
     
@@ -67,6 +68,30 @@ class CalculatorViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.buttons.last?.titleLabel?.textColor, UIColor.white)
         
         XCTAssertEqual(sut.buttons.first?.titleLabel?.font, UIFont.boldSystemFont(ofSize: 24))
+    }
+    
+    func test_IsCalculatorDelegate() {
+        XCTAssertTrue(sut.calculator?.delegate is CalculatorViewController)
+    }
+    
+    func testInput_AC_ShouldSetLabelToZero() {
+        sut.label.text = "Test"
+        let button = sut.buttons.first(where: { $0.titleLabel?.text == "AC" })!
+        
+        sut.input(button)
+        
+        XCTAssertEqual(sut.label.text, "0")
+    }
+    
+    func testButtonBorder_ShouldChange() {
+        
+        let button = sut.buttons.first(where: { $0.titleLabel?.text == ButtonType.addition.rawValue })!
+        
+        XCTAssertEqual(button.layer.borderWidth, 0)
+        sut.calculator?.operation = ButtonType.addition
+        XCTAssertEqual(button.layer.borderWidth, 3)
+        sut.calculator?.operation = ButtonType.addition
+        XCTAssertEqual(button.layer.borderWidth, 0)
     }
 
 }
