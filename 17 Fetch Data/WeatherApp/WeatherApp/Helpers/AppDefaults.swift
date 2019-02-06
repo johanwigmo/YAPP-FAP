@@ -21,7 +21,7 @@ class AppDefaults {
     }
     
     class func remove(key: Key) {
-        UserDefaults.standard.removeObject(forKey: key.rawValue)
+        UserDefaults(suiteName: "group.com.johanwigmo.weatherapp.userdefaults")?.removeObject(forKey: key.rawValue)
     }
     
 }
@@ -30,7 +30,7 @@ extension AppDefaults {
     
     static var cities: [City] {
         get {
-            if let cityStrings = UserDefaults.standard.array(forKey: Key.cities.rawValue) as? [String] {
+            if let cityStrings = UserDefaults(suiteName: "group.com.johanwigmo.weatherapp.userdefaults")?.array(forKey: Key.cities.rawValue) as? [String] {
                 var cities = [City]()
                 for text in cityStrings {
                     let components = text.components(separatedBy: "_")
@@ -49,7 +49,7 @@ extension AppDefaults {
                 citiesToSave.append("\(city.id)_\(city.name)")
             }
             
-            UserDefaults.standard.set(citiesToSave, forKey: Key.cities.rawValue)
+            UserDefaults(suiteName: "group.com.johanwigmo.weatherapp.userdefaults")?.set(citiesToSave, forKey: Key.cities.rawValue)
         }
     }
     

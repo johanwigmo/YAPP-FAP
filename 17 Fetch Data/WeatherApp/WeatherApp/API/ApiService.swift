@@ -23,7 +23,6 @@ class ApiService {
         session.dataTask(with: request, completionHandler: { (data, response, error) in
             DispatchQueue.main.async {
                 
-                print(response?.url)
                 if let error = error {
                     print("ERROR - \(error.localizedDescription)")
                 }

@@ -61,7 +61,7 @@
             </objects>
             <point key="canvasLocation" x="1020" y="27.436281859070466"/>
         </scene>
-        <!--Forecast View Controller-->
+        <!--Title-->
         <scene sceneID="ctJ-pj-Epj">
             <objects>
                 <viewController id="g2p-YB-BsB" customClass="ForecastViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -90,6 +90,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uyy-Z8-jsM"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="uxH-lQ-q1w">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="action" id="lEp-0d-fsi">
+                                <connections>
+                                    <action selector="share:" destination="g2p-YB-BsB" id="lIm-65-um9"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="compose" id="N8c-H7-IMN">
+                                <connections>
+                                    <action selector="mail:" destination="g2p-YB-BsB" id="zRZ-05-Jle"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="clx-e3-LSX" id="bJN-gi-OGs"/>
                     </connections>

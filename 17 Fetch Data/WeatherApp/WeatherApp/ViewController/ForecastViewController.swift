@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class ForecastViewController: UIViewController {
     
@@ -62,5 +63,52 @@ class ForecastViewController: UIViewController {
         view.insertSubview(ViewFactory.background(to: view), at: 0)
     }
     
+    @IBAction func mail(_ sender: Any) {
+        guard MFMailComposeViewController.canSendMail() else {
+            print("Can not send mail")
+            return
+        }
+        
+        guard let city = city, let weather = city.weather?.first?.description else { return }
+        
+        let vc = MFMailComposeViewController()
+        vc.mailComposeDelegate = self
+        
+        vc.setSubject("Weather in \(city.name)")
+        vc.setMessageBody(weather, isHTML: false)
+        
+        present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func share(_ sender: Any) {
+        guard let city = city,
+            let weather = city.weather?.first?.description,
+            let icon = city.weather?.first?.iconImage else { return }
+        
+        let text = city.name + " - " + weather
+        
+        let vc = UIActivityViewController(activityItems: [text, icon], applicationActivities: nil)
+        vc.excludedActivityTypes = [
+            .postToFacebook
+        ]
+        
+        present(vc, animated: true, completion: nil)
+    }
+    
+}
 
+extension ForecastViewController: MFMailComposeViewControllerDelegate {
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        
+        switch result {
+        case .failed:
+            print("Something went wrong")
+        default: break
+        }
+        
+        controller.dismiss(animated: true, completion: nil)
+        
+    }
+    
 }
